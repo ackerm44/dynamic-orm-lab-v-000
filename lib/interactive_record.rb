@@ -60,10 +60,10 @@ class InteractiveRecord
   end
 
   def self.find_by(property: value)
-    #option = self.send("#{property}=", value)
+    option = "#{property}"
     sql = <<-SQL
       SELECT * FROM #{self.table_name}
-      WHERE property = value
+      WHERE option = value
     SQL
 
     DB[:conn].execute(sql)
