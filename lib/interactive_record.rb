@@ -68,7 +68,7 @@ class InteractiveRecord
     else
       "'#{value}'"
     end
-    key = option.keys.join
+    key = option.keys.first
     sql = <<-SQL
       SELECT * FROM #{self.table_name}
       WHERE #{key} = #{value}
