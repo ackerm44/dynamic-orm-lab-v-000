@@ -61,7 +61,7 @@ class InteractiveRecord
     DB[:conn].execute(sql)
   end
 
-  def self.find_by(key: value)
+  def self.find_by(name: rocky)
     #option = "#{value}"
     binding.pry
     sql = <<-SQL
