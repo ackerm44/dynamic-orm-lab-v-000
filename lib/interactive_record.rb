@@ -62,8 +62,7 @@ class InteractiveRecord
   end
 
   def self.find_by(option = {})
-    #option = "#{value}"
-    #binding.pry
+    option = "#{key}: #{value}"
     sql = <<-SQL
       SELECT * FROM #{self.table_name}
       WHERE #{key} = '#{value}'
