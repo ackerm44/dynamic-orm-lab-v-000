@@ -62,8 +62,8 @@ class InteractiveRecord
   end
 
   def self.find_by(option)
-    value = option.values.first
-    if value == Fixnum
+    value = option.values.join
+    if value.class == Fixnum
       value
     else
       "'#{value}'"
