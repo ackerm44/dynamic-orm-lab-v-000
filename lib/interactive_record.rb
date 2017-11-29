@@ -23,7 +23,7 @@ class InteractiveRecord
   end
 
   def initialize(options={})
-    
+
     options.each do |property, value|
       self.send("#{property}=", value)
     end
@@ -67,7 +67,7 @@ class InteractiveRecord
       SELECT * FROM #{self.table_name}
       WHERE #{key} = '#{value}'
     SQL
-    binding.pry
+    puts sql
 
     DB[:conn].execute(sql)
   end
