@@ -72,7 +72,7 @@ class InteractiveRecord
     key = option.keys.first
     sql = <<-SQL
       SELECT * FROM #{self.table_name}
-      WHERE #{key} = #{value}
+      WHERE #{key} = #{fixed}
     SQL
 
     DB[:conn].execute(sql)
