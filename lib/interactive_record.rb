@@ -67,7 +67,7 @@ class InteractiveRecord
     if value.is_a? Integer
       fixed = value
     else
-      fixed = "'#{value}'""
+      fixed = "'#{value}'"
     end
     key = option.keys.join
     sql = <<-SQL
