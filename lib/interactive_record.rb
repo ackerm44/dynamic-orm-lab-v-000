@@ -65,11 +65,10 @@ class InteractiveRecord
     #option = "#{value}"
     sql = <<-SQL
       SELECT * FROM #{self.table_name}
-      WHERE #{key} = '#{value}'
+      WHERE ? = '?'
     SQL
-    puts sql
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, self.key, self.value)
   end
 
 end
