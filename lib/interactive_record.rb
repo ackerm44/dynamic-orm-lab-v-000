@@ -63,7 +63,7 @@ class InteractiveRecord
 
   def self.find_by(option)
     value = option.values.join
-    key = option.key
+    key = option.keys
     binding.pry
     sql = <<-SQL
       SELECT * FROM #{self.table_name}
