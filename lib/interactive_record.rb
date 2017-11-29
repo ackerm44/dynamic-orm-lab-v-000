@@ -69,7 +69,6 @@ class InteractiveRecord
       "'#{value}'"
     end
     key = option.keys.join
-    binding.pry
     sql = <<-SQL
       SELECT * FROM #{self.table_name}
       WHERE #{key} = #{value}
