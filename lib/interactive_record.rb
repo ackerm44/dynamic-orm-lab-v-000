@@ -65,7 +65,7 @@ class InteractiveRecord
     value = option.values
     sql = <<-SQL
       SELECT * FROM #{self.table_name}
-      WHERE #{key} = '#{value}'
+      WHERE #{option.keys} = #{value}
     SQL
 
     DB[:conn].execute(sql)
