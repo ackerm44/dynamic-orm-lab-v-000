@@ -60,7 +60,7 @@ class InteractiveRecord
   end
 
   def self.find_by(property: value)
-    self.send("#{property}=", value)
+    option = self.send("#{property}=", value)
     sql = <<-SQL
       SELECT * FROM #{self.table_name}
       WHERE k = v
