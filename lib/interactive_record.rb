@@ -67,6 +67,7 @@ class InteractiveRecord
       value
     else
       "'#{value}'"
+    end
     key = option.keys.join
     binding.pry
     sql = <<-SQL
