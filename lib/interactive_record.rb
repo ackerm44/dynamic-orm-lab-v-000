@@ -63,6 +63,10 @@ class InteractiveRecord
 
   def self.find_by(option)
     value = option.values.join
+    if value == Fixnum
+      value
+    else
+      "'#{value}'"
     key = option.keys.join
     binding.pry
     sql = <<-SQL
